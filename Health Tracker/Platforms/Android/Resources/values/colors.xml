@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#fcfdf6</color>
+  <color name="colorPrimaryDark">#dfe4d7</color>
+  <color name="colorAccent">@android:color/black</color>
+  <color name="navigationbarColor">@android:color/transparent</color>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health_Tracker.Logbook"
+             Title="Logbook" BackgroundColor="{DynamicResource Background}">
+    <ScrollView  Margin="0,12,0,0">
+        <Grid RowDefinitions=" *">
+            <StackLayout  ZIndex="1">
+                <Border BackgroundColor="{DynamicResource SurfaceVariant}" Margin="12,0,6,6">
+                    <Grid RowDefinitions="50, *">
+                        <Grid ColumnDefinitions="50, 150, *">
+                            <Border BackgroundColor="{DynamicResource Secondary}" StrokeThickness="0">
+                                <Label Text="AUG 10" VerticalOptions="Center"  TextColor="{DynamicResource OnSecondary}" Margin="4,0,0,0"/>
+                            </Border>
+                            <StackLayout Grid.Column="1" Margin="12,0,0,0">
+                                <Label Text="Today" FontSize="12" HorizontalOptions="Start" Margin="0,5,0,0"/>
+                                <Label HorizontalOptions="Start" Text="220 lb" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"/>
+                            </StackLayout>
+                            <Border Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="{DynamicResource Error}" HeightRequest="35" Padding="8" Margin="0,0,12,0">
+                                <Label Text=".5 lb" TextColor="{DynamicResource OnError}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <Border BackgroundColor="{DynamicResource SurfaceVariant}" Margin="12,0,6,0">
+                    <Grid RowDefinitions="50, *">
+                        <Grid ColumnDefinitions="50, 150, *">
+                            <Border BackgroundColor="{DynamicResource Secondary}" StrokeThickness="0">
+                                <Label Text="AUG 09" VerticalOptions="Center"  TextColor="{DynamicResource OnSecondary}" Margin="4,0,0,0"/>
+                            </Border>
+                            <StackLayout Grid.Column="1" Margin="12,0,0,0">
+                                <Label Text="Today" FontSize="12" HorizontalOptions="Start" Margin="0,5,0,0"/>
+                                <Label HorizontalOptions="Start" Text="219 lb" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"/>
+                            </StackLayout>
+                            <Border Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="{DynamicResource Tertiary}" HeightRequest="35" Padding="8" Margin="0,0,12,0">
+                                <Label Text=".5 lb" TextColor="{DynamicResource OnTertiary}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Border>
+               
+            </StackLayout>
+            <Button 
+                Grid.Row="0"
+                Text="New weight"
+                FontAttributes="Bold"
+                ZIndex="2"
+                FontSize="14"
+                BorderColor="{DynamicResource PrimaryContainer}"
+                BackgroundColor="{DynamicResource PrimaryContainer}"
+                CornerRadius="16"
+                TextColor="{DynamicResource OnPrimaryContainer}"
+                WidthRequest="120"
+                HeightRequest="56"
+                Margin="0,0,24,24"
+                HorizontalOptions="End"
+                VerticalOptions="End">
+                <Button.Shadow>
+                    <Shadow Brush="{DynamicResource Gray300}"
+                        Offset="6,6"
+                        Radius="16"
+                        Opacity="0.9"/>
+                </Button.Shadow>
+            </Button>
+
+        </Grid>
+        
+        
+        <!--<Grid BackgroundColor="{DynamicResource Background}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+
+        </Grid>-->
+    </ScrollView>
+    
+</ContentPage>

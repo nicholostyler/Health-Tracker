@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health_Tracker.MainPage"
+             Shell.NavBarHasShadow="true" BackgroundColor="{DynamicResource Background}" Title="Logbook">
+
+    <ScrollView >
+        <Grid RowDefinitions="20, 80, 200, 150, *" ColumnDefinitions=".50*,.50*" Padding="10">
+            <Label Grid.Row="0" Text="Nicholos - August 10th 2022" Margin="5,0,0,0"/>
+            <StackLayout Grid.Row="1" Margin="5,12,0,12">
+                <Label Text="CURRENT WEIGHT" FontAttributes="Bold" FontSize="Small"/>
+                <Label Text="220 lb" FontAttributes="Bold" FontSize="Large"/>
+            </StackLayout>
+
+
+
+            <Grid Grid.Row="2" Grid.ColumnSpan="2" ColumnDefinitions=".5*, .5*" RowDefinitions=".5*,.5*" Margin="-12,12,0,0">
+                <Border Grid.Column="0" Grid.Row="0" Padding="12" Margin="12,0,0,12" StrokeShape="RoundRectangle 8" BackgroundColor="{DynamicResource ErrorContainer}">
+                    <Grid RowDefinitions="50*,50*">
+                        <Label Text="Last 7 Days"/>
+                        <Label Grid.Row="1" Text="Gained 2" FontAttributes="Bold"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="0" Padding="12" Margin="12,0,0,12" StrokeShape="RoundRectangle 8" BackgroundColor="#f0f1eb">
+                    <Grid RowDefinitions="50*,50*">
+                        <Label Text="Last 30 Days"/>
+                        <Label Grid.Row="1" Text="Lost 3" FontAttributes="Bold"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="0" Grid.Row="1" Padding="12" Margin="12,0,0,12" StrokeShape="RoundRectangle 8" BackgroundColor="#f0f1eb">
+                    <Grid RowDefinitions="50*,50*">
+                        <Label Text="Last Year"/>
+                        <Label Grid.Row="1" Text="Lost 40" FontAttributes="Bold"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="1"  Padding="12" Margin="12,0,0,12" StrokeShape="RoundRectangle 8" BackgroundColor="#f0f1eb">
+                    <Grid RowDefinitions="50*,50*">
+                        <Label Text="Median Weight"/>
+                        <Label Grid.Row="1" Text="Lost 35" FontAttributes="Bold"/>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Border Grid.Row="3" Grid.ColumnSpan="2" StrokeShape="RoundRectangle 8" BackgroundColor="#f0f1eb">
+                <Grid Padding="12" RowDefinitions="50*, 100*, 50*" ColumnDefinitions="33*, 33*, 33*">
+                    <Label Text="Your Progress" Grid.Row="0" Margin="0,0,0,0"/>
+                    <StackLayout Margin="0,0,0,0" Grid.Row="1" Orientation="Vertical">
+                        <Label Text="Current"/>
+                        <Label Text="220 lb" FontAttributes="Bold" FontSize="20"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+                        <Label Text="Left"/>
+                        <Label Text="40 lb" FontAttributes="Bold" FontSize="20"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical">
+                        <Label Text="Target"/>
+                        <Label Text="180 lb" FontAttributes="Bold" FontSize="20"/>
+                    </StackLayout>
+                    <ProgressBar Margin="0,0,0,0" Grid.Row="2" Grid.ColumnSpan="3" Progress="0.5" ProgressColor="#2f6b26" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="4" Grid.ColumnSpan="2" Margin="0,12,0,0" BackgroundColor="#f0f1eb" StrokeShape="RoundRectangle 8">
+                <Grid RowDefinitions="25, 80, *" Padding="12">
+                    <Label Text="Predictions" Grid.Row="0" TextColor="#43483f"/>
+                    <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Margin="0,12,0,0">
+                        <Border Padding="12" WidthRequest="120" Margin="0,0,12,0" BackgroundColor="#f0f1eb" Stroke="{DynamicResource Outline}" StrokeShape="RoundRectangle 8">
+                            <Grid RowDefinitions=".50*, .50*">
+                                <Label Grid.Row="0" Text="Goal Rate" TextColor="{DynamicResource OnSurfaceVariant}" HorizontalOptions="Center"/>
+                                <Label Grid.Row="1" Text="2 lb" HorizontalOptions="Center" TextColor="{DynamicResource OnSurfaceVariant}"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Padding="12" WidthRequest="120" Margin="0,0,12,0" BackgroundColor="{DynamicResource Primary}" Stroke="{DynamicResource Outline}" StrokeShape="RoundRectangle 8">
+                            <Grid RowDefinitions=".50*, .50*" >
+                                <Label Grid.Row="0" Text="Current Rate" TextColor="{DynamicResource OnPrimary}" HorizontalOptions="Center"/>
+                                <Label Grid.Row="1" Text="1 lb" HorizontalOptions="Center" TextColor="{DynamicResource OnPrimary}"/>
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Margin="0,12,0,0">
+                        <Border Stroke="{DynamicResource Outline}" BackgroundColor="#386569">
+                            <Grid ColumnDefinitions="33*, 33*, 33*"  Padding="8" Margin="0,0,0,12">
+                                <Label Grid.Column="0" Text="216 lbs" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="1" Text="On September 10, 2022" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="2" Text="Next Month" TextColor="{DynamicResource OnTertiary}"/>
+                            </Grid>
+                        </Border>
+                        <Border Stroke="{DynamicResource Outline}" BackgroundColor="#386569">
+                            <Grid ColumnDefinitions="33*, 33*, 33*"  Padding="8" Margin="0,0,0,12">
+                                <Label Grid.Column="0" Text="208 lbs" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="1" Text="On November 10, 2022" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="2" Text="Next 3 Months" TextColor="{DynamicResource OnTertiary}"/>
+                            </Grid>
+                        </Border>
+                        <Border Stroke="{DynamicResource Outline}" BackgroundColor="#386569">
+                            <Grid ColumnDefinitions="33*, 33*, 33*"  Padding="8" Margin="0,0,0,12">
+                                <Label Grid.Column="0" Text="196 lbs" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="1" Text="On November 10, 2022" TextColor="{DynamicResource OnTertiary}"/>
+                                <Label Grid.Column="2" Text="Next 6 Months" TextColor="{DynamicResource OnTertiary}"/>
+                            </Grid>
+                        </Border>
+                        
+                    </StackLayout>
+                </Grid>
+
+            </Border >
+            
+        </Grid>
+    </ScrollView>
+   
+    
+    
+
+</ContentPage>
