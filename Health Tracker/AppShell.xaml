@@ -6,25 +6,25 @@
     xmlns:local="clr-namespace:Health_Tracker"
     xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
     android:TabbedPage.ToolbarPlacement="Bottom"
-    Shell.NavBarHasShadow="true"
-    FlyoutBackgroundColor="{DynamicResource Background}"
-    FlyoutWidth="68"
-    FlyoutBehavior="{OnIdiom Phone=Disabled, Default=Locked}"
+
     >
-    <!-- Desktop / Tablet-->
-    <FlyoutItem Icon="grid.png">
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+    <TabBar>
+        <Tab
+            Title="Home"
+            Icon="Home">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
 
-    </FlyoutItem>
-    <FlyoutItem Icon="grid.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Logbook}"/>
-
-    </FlyoutItem>
-
-    <TabBar x:Name="PhoneTabs">
-        <Tab>
-            <ShellContent Title="Home" Icon="grid.svg" ContentTemplate="{DataTemplate local:MainPage}"/>
-            <ShellContent Title="Logbook" Icon="grid.svg" ContentTemplate="{DataTemplate local:Logbook}"/>
+        </Tab>
+        <Tab
+            Title="Logs"
+            
+            Icon="list">
+            <ShellContent ContentTemplate="{DataTemplate local:Logbook}"/>
+        </Tab>
+        <Tab
+            Title="Profile"
+            Icon="profile">
+            <ShellContent ContentTemplate="{DataTemplate local:Logbook}"/>
         </Tab>
     </TabBar>
 

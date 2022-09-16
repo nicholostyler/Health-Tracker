@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Health_Tracker.MainPage"
-             Shell.NavBarHasShadow="true" BackgroundColor="{DynamicResource Background}" Title="Logbook">
+             BackgroundColor="{DynamicResource Background}"
+             Title="Home">
 
     <ScrollView >
         <Grid RowDefinitions="20, 80, 200, 150, *" ColumnDefinitions=".50*,.50*" Padding="10">

@@ -53,7 +53,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\add_plus - Copy.svg" />
+	  <None Remove="Resources\Images\book_icon - Copy.svg" />
+	  <None Remove="Resources\Images\grid - Copy.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AddWeightRecordView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="HomeTabPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Logbook.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProfilePageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
